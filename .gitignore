@@ -1,6 +1,6 @@
 **/api_keys.py
 **/.ipynb_checkpoints/
-**/.DS_Store
+**/.DS_Store/
 __pycache__/
 bottle.csv
 cast.csv
