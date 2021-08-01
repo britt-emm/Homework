@@ -57,5 +57,25 @@ def nobel_year():
     # Python dictionaries to the JSON format.
     return jsonify(results)
 
+# a route for adding nobel prize data
+@app.route('/v1/prizes/new', methods=['POST', 'GET'])
+def nobel_new():
+    if request.method == 'POST':
+        data = request.form
+        with open('./static/nobel.json', 'r+') as file:
+            file_data = json.load(file)
+            file_data['prizes'].append(data)
+            # Sets file's current position at offset.
+            file.seek(0)
+            # convert back to json.
+            json.dump(file_data, file, indent = 4)
+        return redirect(url_for('user', usr =data))
+    else:
+        return render_template('add-new.html')
+
+@app.route('/<usr>')
+def user(usr):
+    return f"<h1>{usr}</h1>"
+
 if __name__ == "__main__":
     app.run(debug=True)
