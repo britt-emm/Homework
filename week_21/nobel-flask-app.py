@@ -18,7 +18,7 @@ def home():
     <h2>How to use this API</h2>
     <p>To display all of the Nobel Prize info: please add '/v1/prizes/all' to the end of the original URL</p>
     <p>To display all of the Nobel Prize info for a certain year: please add '/v1/prizes/?year=YEAR' to the end of the original URL</p>
-    <p>To add information to the API</p>
+    <p>To add information to the API: please add '/v1/prizes/new' to the end of the url and fill out the form</p>
     <p>This is a basic web or REST API. APIs are important because they let two applications talk to each other, while providing a layer of security
     for both applications by limiting what they access. Other types of APIs include Open APIs and Internal APIs.</p>"""
 
